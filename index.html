@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginScreen" class="screen active">
+            <h1>Bem-vindo!</h1>
+            <form id="loginForm">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="#" id="cadastrarUsuarioLink">Cadastre-se aqui</a></p>
+        </div>
+
+        <div id="cadastroScreen" class="screen">
+            <h1>Cadastrar Novo Usuário</h1>
+            <form id="cadastroUsuarioForm">
+                <label for="novoUsuario">Usuário:</label>
+                <input type="text" id="novoUsuario" name="novoUsuario" required>
+                <span id="usuarioFeedback"></span>
+                
+                <label for="novaSenha">Senha:</label>
+                <input type="password" id="novaSenha" name="novaSenha" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="#" id="voltarLoginLink">Voltar ao login</a></p>
+        </div>
+  
+        <div class="configuracoes">
+            <button id="configuracoesBtn">Configurações</button>
+            <input type="file" id="uploadDB" style="display: none;" accept=".json">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/alasql@0.6.2/dist/alasql.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
